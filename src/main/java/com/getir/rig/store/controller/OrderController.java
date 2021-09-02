@@ -27,7 +27,7 @@ public class OrderController {
 
     @GetMapping("/orderByCustomer/{username}")
     @ApiOperation(value = "List the orders according to pagination rule")
-    public ResponseEntity<List<Order>> getOrdersByDate(@RequestParam("username") String username,@RequestBody @Validated PaginationDto paginationDto){
+    public ResponseEntity<List<Order>> getOrdersByCustomer(@RequestParam("username") String username,@RequestBody @Validated PaginationDto paginationDto){
         return new ResponseEntity<List<Order>>(orderService.listOrderByCustomer(paginationDto.getPage(),paginationDto.getSize(),username), HttpStatus.OK) ;
     }
 

@@ -9,10 +9,10 @@ spring:
       authentication-database: admin
       database: book-store
       port: 27017
-      host: mongo-db
+      host: localhost
 
 keycloak:
-  auth-server-url: http://auth-server:8083/auth
+  auth-server-url: http://localhost:8083/auth
   realm: getir
   resource: newClient
   public-client: true
